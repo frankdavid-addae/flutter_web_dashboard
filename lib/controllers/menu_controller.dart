@@ -8,36 +8,36 @@ class MenuController extends GetxController {
   var activeItem = OverviewPageRoute.obs;
   var hoveredItem = ''.obs;
 
-  changeActiveItem(String item) {
-    activeItem.value = item;
+  changeActiveItem(String itemName) {
+    activeItem.value = itemName;
   }
 
-  onHover(String item) {
-    if (!isActive(item)) hoveredItem.value = item;
+  onHover(String itemName) {
+    if (!isActive(itemName)) hoveredItem.value = itemName;
   }
 
-  isActive(String item) => activeItem.value == item;
+  isActive(String itemName) => activeItem.value == itemName;
 
-  isHovered(String item) => hoveredItem.value == item;
+  isHovered(String itemName) => hoveredItem.value == itemName;
 
-  Widget returnIcon(String item) {
-    switch (item) {
+  Widget returnIcon(String itemName) {
+    switch (itemName) {
       case OverviewPageRoute:
-        return _customIcon(Icons.trending_up, item);
+        return _customIcon(Icons.trending_up, itemName);
       case DriversPageRoute:
-        return _customIcon(Icons.drive_eta, item);
+        return _customIcon(Icons.drive_eta, itemName);
       case ClientsPageRoute:
-        return _customIcon(Icons.people_alt_outlined, item);
+        return _customIcon(Icons.people_alt_outlined, itemName);
       case AuthenticationPageRoute:
-        return _customIcon(Icons.exit_to_app, item);
+        return _customIcon(Icons.exit_to_app, itemName);
       default:
-        return _customIcon(Icons.exit_to_app, item);
+        return _customIcon(Icons.exit_to_app, itemName);
     }
   }
 
-  Widget _customIcon(IconData icon, String item) {
-    if (isActive(item)) return Icon(icon, size: 22.0, color: darkColor);
+  Widget _customIcon(IconData icon, String itemName) {
+    if (isActive(itemName)) return Icon(icon, size: 22.0, color: darkColor);
 
-    return Icon(icon, color: isHovered(item) ? darkColor : lightGreyColor);
+    return Icon(icon, color: isHovered(itemName) ? darkColor : lightGreyColor);
   }
 }
