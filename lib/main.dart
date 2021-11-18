@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter_web_dashboard/layout.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         ),
         primaryColor: Colors.blue,
       ),
-      home: Container(),
+      home: SiteLayout(),
     );
   }
 }
