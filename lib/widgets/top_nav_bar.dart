@@ -72,13 +72,15 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
               ),
             ],
           ),
+          SizedBox(width: 10.0),
           Container(
             width: 1.0,
             height: 22.0,
             color: lightGreyColor,
           ),
-          SizedBox(width: 24.0),
+          SizedBox(width: 20.0),
           CustomText(text: 'David McQarphui', color: lightGreyColor),
+          SizedBox(width: 15.0),
           Container(
             decoration: BoxDecoration(
               color: Colors.white,
@@ -99,5 +101,5 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
         ],
       ),
       iconTheme: IconThemeData(color: darkColor),
-      backgroundColor: Colors.transparent,
+      backgroundColor: lightColor,
     );
