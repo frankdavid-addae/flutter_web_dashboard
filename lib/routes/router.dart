@@ -1,9 +1,8 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, avoid_web_libraries_in_flutter, unused_import
 
 import 'dart:js';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/pages/authentication/authentication.dart';
 import 'package:flutter_web_dashboard/pages/clients/clients.dart';
 import 'package:flutter_web_dashboard/pages/drivers/drivers.dart';
 import 'package:flutter_web_dashboard/pages/overview/overview.dart';

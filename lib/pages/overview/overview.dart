@@ -5,6 +5,8 @@ import 'package:flutter_web_dashboard/constants/controllers.dart';
 import 'package:flutter_web_dashboard/pages/overview/widgets/overview_cards_large.dart';
 import 'package:flutter_web_dashboard/pages/overview/widgets/overview_cards_medium.dart';
 import 'package:flutter_web_dashboard/pages/overview/widgets/overview_cards_small.dart';
+import 'package:flutter_web_dashboard/pages/overview/widgets/revenue_section_large.dart';
+import 'package:flutter_web_dashboard/pages/overview/widgets/revenue_section_small.dart';
 import 'package:flutter_web_dashboard/widgets/custom_text.dart';
 import 'package:flutter_web_dashboard/widgets/responsive_widget.dart';
 import 'package:get/get.dart';
@@ -42,7 +44,11 @@ class OverviewPage extends StatelessWidget {
                 else
                   OverviewCardsLargeScreen()
               else
-                OverviewCardsSmallScreen()
+                OverviewCardsSmallScreen(),
+              if (!ResponsiveWidget.isSmallScreen(context))
+                RevenueSectionLarge()
+              else
+                RevenueSectionSmall(),
             ],
           ),
         ),
