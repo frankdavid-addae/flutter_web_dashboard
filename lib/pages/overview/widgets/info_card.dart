@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_web_dashboard/constants/style.dart';
 
@@ -38,10 +40,14 @@ class InfoCard extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Expanded(
-                child: Container(
+              Container(
+                height: 5.0,
+                decoration: BoxDecoration(
                   color: topColor ?? activeColor,
-                  height: 5.0,
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(8.0),
+                    topLeft: Radius.circular(8.0),
+                  ),
                 ),
               ),
               Expanded(
@@ -59,7 +65,7 @@ class InfoCard extends StatelessWidget {
                       ),
                     ),
                     TextSpan(
-                      text: '$value\n',
+                      text: '$value',
                       style: TextStyle(
                         fontSize: 40.0,
                         color: isActive ? activeColor : darkColor,
