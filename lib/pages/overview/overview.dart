@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_web_dashboard/constants/controllers.dart';
+import 'package:flutter_web_dashboard/pages/overview/widgets/available_drivers.dart';
 import 'package:flutter_web_dashboard/pages/overview/widgets/overview_cards_large.dart';
 import 'package:flutter_web_dashboard/pages/overview/widgets/overview_cards_medium.dart';
 import 'package:flutter_web_dashboard/pages/overview/widgets/overview_cards_small.dart';
@@ -49,6 +50,7 @@ class OverviewPage extends StatelessWidget {
                 RevenueSectionLarge()
               else
                 RevenueSectionSmall(),
+              AvailableDrivers(),
             ],
           ),
         ),

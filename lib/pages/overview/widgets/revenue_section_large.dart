@@ -24,7 +24,7 @@ class RevenueSectionLarge extends StatelessWidget {
             blurRadius: 12.0,
           ),
         ],
-        border: Border.all(color: lightGreyColor, width: 3.0),
+        border: Border.all(color: lightGreyColor, width: 0.5),
       ),
       child: Row(
         children: [
